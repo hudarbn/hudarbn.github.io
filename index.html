@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Farming Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); 
+      gap: 15px;
+    }
+
+    .card {
+      border: none; 
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      text-align: center;
+      position: relative;
+      transition: all 0.3s ease;
+      overflow: hidden;
+      padding: 15px;
+      background: white;
+    }
+
+    .card h5 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;   
+      width: 6px;
+      height: 100%;
+      border-radius: 15px 0 0 15px;
+    }
+
+    .kelembaban::after { background-color: #0d6efd; }
+    .tds::after        { background-color: #198754; }
+    .kekeruhan::after  { background-color: #0dcaf0; }
+    .wtemp::after      { background-color: #ffc107; }
+    .wflow::after      { background-color: #dc3545; }
+    .oksigen::after    { background-color: #0d6efd; }
+    .lux::after        { background-color: #198754; }
+    .amtemp::after     { background-color: #0dcaf0; }
+    .ec::after         { background-color: #ffc107; }
+    .ph::after         { background-color: #dc3545; }
+
+    .kelembaban h5 { color: #0d6efd; }
+    .tds h5        { color: #198754; }
+    .kekeruhan h5  { color: #0dcaf0; }
+    .wtemp h5      { color: #ffc107; }
+    .wflow h5      { color: #dc3545; }
+    .oksigen h5    { color: #0d6efd; }
+    .lux h5        { color: #198754; }
+    .amtemp h5     { color: #0dcaf0; }
+    .ec h5         { color: #ffc107; }
+    .ph h5         { color: #dc3545; }
+
+    .kelembaban:hover { background-color: #0d6efd; color: white; }
+    .tds:hover        { background-color: #198754; color: white; }
+    .kekeruhan:hover  { background-color: #0dcaf0; color: white; }
+    .wtemp:hover      { background-color: #ffc107; color: white; }
+    .wflow:hover      { background-color: #dc3545; color: white; }
+    .oksigen:hover    { background-color: #0d6efd; color: white; }
+    .lux:hover        { background-color: #198754; color: white; }
+    .amtemp:hover     { background-color: #0dcaf0; color: white; }
+    .ec:hover         { background-color: #ffc107; color: white; }
+    .ph:hover         { background-color: #dc3545; color: white; }
+
+    .card:hover h3, .card:hover h5 {
+      color: white !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-4">
+    <h3 class="mb-4">Smart Farming</h3>
+
+    <div class="dashboard-grid">
+      <div class="card kelembaban">
+        <h5>KELEMBABAN (RH)</h5>
+        <h3>54 %</h3>
+      </div>
+      <div class="card tds">
+        <h5>TDS</h5>
+        <h3>400 ppm</h3>
+      </div>
+      <div class="card kekeruhan">
+        <h5>KEKERUHAN (TURBID)</h5>
+        <h3>18 NTU</h3>
+      </div>
+      <div class="card wtemp">
+        <h5>TEMPERATUR AIR (WTEMP)</h5>
+        <h3>25 C</h3>
+      </div>
+      <div class="card wflow">
+        <h5>ALIRAN AIR (WFLOW)</h5>
+        <h3>34</h3>
+      </div>
+      <div class="card oksigen">
+        <h5>OKSIGEN TERLARUT (DISS.OXYGEN)</h5>
+        <h3>10 ppm</h3>
+      </div>
+      <div class="card lux">
+        <h5>INTENSITAS CAHAYA (LUX)</h5>
+        <h3>100 Lux</h3>
+      </div>
+      <div class="card amtemp">
+        <h5>TEMPERATUR UDARA (AMTEMP)</h5>
+        <h3>34 C</h3>
+      </div>
+      <div class="card ec">
+        <h5>EC</h5>
+        <h3>2</h3>
+      </div>
+      <div class="card ph">
+        <h5>PH</h5>
+        <h3>7.1</h3>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
